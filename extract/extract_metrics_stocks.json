@@ -1,0 +1,39 @@
+{
+    "investing": [
+        {
+            "id": "AAPL:NASDAQ",
+            "name_url": "apple-computer-inc"
+        },
+        {
+            "id": "CIB:NYSE",
+            "name_url": "bancolombia-sa"
+        },
+        {
+            "id": "EC:NYSE",
+            "name_url": "ecopetrol-sa-adr"
+        },
+        {
+            "id": "ECOPETROL:BVC",
+            "name_url": "ecopetrol-cn"
+        },
+        {
+            "id": "BCOLOMBIA:BVC",
+            "name_url": "bcolombia"
+        },
+        {
+            "id": "PFBCOLOM:BVC",
+            "name_url": "pfbcolom"
+        }
+    ],
+    "google": [
+        {
+            "id": "AAPL:NASDAQ"
+        },
+        {
+            "id": "CIB:NYSE"
+        },
+        {
+            "id": "EC:NYSE"
+        }
+    ]
+}

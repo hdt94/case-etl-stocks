@@ -1,0 +1,103 @@
+{
+    "sources": {
+        "investing": {
+            "base_url": "https://www.investing.com/equities/",
+            "headers": {
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.102 Safari/537.36"
+            },
+            "pages": {
+                "general": {
+                    "end_url": "",
+                    "metrics": {
+                        "currency": {
+                            "output_type": "scalar",
+                            "xpath": "//span[contains(., 'Currency in')]/following-sibling::span/text()"
+                        },
+                        "price": {
+                            "output_type": "scalar",
+                            "xpath": "//span[@data-test='instrument-price-last']/text()"
+                        },
+                        "shares": {
+                            "output_type": "scalar",
+                            "xpath": "//dd[@data-test='sharesOutstanding']//text()"
+                        }
+                    }
+                },
+                "balance-sheet": {
+                    "end_url": "-balance-sheet",
+                    "metrics": {
+                        "date_years": {
+                            "output_type": "array",
+                            "xpath": "//th[contains(., 'Period Ending:')]/following-sibling::th/span/text()"
+                        },
+                        "date_days_months": {
+                            "output_type": "array",
+                            "xpath": "//th[contains(., 'Period Ending:')]/following-sibling::th/div/text()"
+                        },
+                        "equity": {
+                            "output_type": "array",
+                            "xpath": "//td[contains(., 'Total Equity')]/following-sibling::td/text()"
+                        },
+                        "money_units": {
+                            "output_type": "scalar",
+                            "xpath": "//div[@id='rrtable']/following-sibling::div[contains(@class, 'bottomRemark')]/text()"
+                        }
+                    }
+                },
+                "income-statement": {
+                    "end_url": "-income-statement",
+                    "metrics": {
+                        "date_years": {
+                            "output_type": "array",
+                            "xpath": "//th[contains(., 'Period Ending:')]/following-sibling::th/span/text()"
+                        },
+                        "date_days_months": {
+                            "output_type": "array",
+                            "xpath": "//th[contains(., 'Period Ending:')]/following-sibling::th/div/text()"
+                        },
+                        "reveneus": {
+                            "output_type": "array",
+                            "xpath": "//td[contains(., 'Total Revenue')]/following-sibling::td//text()"
+                        },
+                        "gross_profits": {
+                            "output_type": "array",
+                            "xpath": "//td[contains(., 'Gross Profit')]/following-sibling::td//text()"
+                        },
+                        "operating_incomes": {
+                            "output_type": "array",
+                            "xpath": "//td[contains(., 'Operating Income')]/following-sibling::td//text()"
+                        },
+                        "net_incomes": {
+                            "output_type": "array",
+                            "xpath": "//td[re:test(., '^Net Income$')]/following-sibling::td//text()"
+                        },
+                        "money_units": {
+                            "output_type": "scalar",
+                            "xpath": "//div[@id='rrtable']/following-sibling::div[contains(@class, 'bottomRemark')]/text()"
+                        }
+                    }
+                }
+            }
+        },
+        "google": {
+            "base_url": "https://www.google.com/finance/quote/",
+            "headers": {
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.102 Safari/537.36"
+            },
+            "pages": {
+                "quote": {
+                    "metrics": {
+                        "price": {
+                            "output_type": "scalar",
+                            "xpath": "//div/@data-last-price"
+                        },
+                        "pe_ratio": {
+                            "output_type": "scalar",
+                            "xpath": "//span[contains(., 'P/E ratio')]/following-sibling::div//text()"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

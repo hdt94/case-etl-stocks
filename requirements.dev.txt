@@ -1,0 +1,2 @@
+autopep8==1.7.0
+ipykernel==6.15.3

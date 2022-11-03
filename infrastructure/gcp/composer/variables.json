@@ -1,0 +1,7 @@
+{
+    "extract_output_dest": "",
+    "transform_dataproc_region": "",
+    "transform_output_dest": "",
+    "transform_spark_app": "",
+    "transform_spark_pyfiles": ""
+}

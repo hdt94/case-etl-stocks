@@ -1,0 +1,12 @@
+__pycache__/
+.pyc
+
+.env
+envvars
+
+*egg-info/
+venv*/
+virtualenv*/
+
+data/
+output*/
