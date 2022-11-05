@@ -14,6 +14,10 @@ chmod +x ./init-cloud-env.sh ./infrastructure/gcp/scripts/*.sh
 Initialize cloud resources:
 - If running from Cloud Shell:
     ```bash
+    # Install rsync temporarily
+    sudo apt-get install -yqq rsync
+
+    # Initialize environment
     GCP_REGION=us-central1 RUN_ALL=true ./init-cloud-env.sh
     ```
 - If running from other than Cloud Shell:
