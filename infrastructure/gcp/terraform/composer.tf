@@ -7,6 +7,8 @@ resource "google_service_account_iam_member" "custom_service_account" {
 }
 
 resource "google_composer_environment" "demo_env" {
+  depends_on = [google_project_service.composer]
+
   provider = google-beta
   name     = "demo-env"
   region = var.REGION
