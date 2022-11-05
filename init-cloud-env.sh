@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 REPO_ROOT=$(realpath $(dirname $0))
 SCRIPTS_DIR=${REPO_ROOT}/infrastructure/gcp/scripts
 

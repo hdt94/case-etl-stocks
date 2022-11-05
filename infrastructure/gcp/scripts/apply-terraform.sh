@@ -1,5 +1,6 @@
 #!/bin/bash
 
+set -e
 
 if [[ -z $REPO_ROOT ]]; then
     echo 'REPO_ROOT is undefined' >&2
