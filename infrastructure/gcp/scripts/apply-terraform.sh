@@ -5,7 +5,7 @@ if [[ -z $REPO_ROOT ]]; then
     echo 'REPO_ROOT is undefined' >&2
     exit 1
 fi
-if [[ -z GCP_PROJECT_ID ]]; then
+if [[ -z $GCP_PROJECT_ID ]]; then
     if [[ $GOOGLE_CLOUD_SHELL = true || $CLOUD_SHELL = true ]]; then
         GCP_PROJECT_ID=$DEVSHELL_PROJECT_ID
     else
@@ -13,7 +13,7 @@ if [[ -z GCP_PROJECT_ID ]]; then
         exit 1
     fi
 fi
-if [[ -z GCP_REGION ]]; then
+if [[ -z $GCP_REGION ]]; then
     echo 'GCP_REGION is undefined' >&2
     exit 1
 fi
