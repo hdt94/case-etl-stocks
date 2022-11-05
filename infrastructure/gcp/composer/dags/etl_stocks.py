@@ -15,7 +15,7 @@ from airflow.providers.google.cloud.operators.dataproc import (
 def etl_stocks():
     @task.virtualenv(
         task_id="extract",
-        requirements=["Scrapy==2.6.2", "pyopenssl==22.0.0",],
+        requirements=["Scrapy==2.6.2", "pyopenssl==22.0.0", "attrs==22.1.0"],
         system_site_packages=True,
     )
     def extract(output_dest):
